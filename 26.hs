@@ -1,0 +1,1 @@
+combinations :: Int -> [a] -> [[a]]

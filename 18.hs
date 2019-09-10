@@ -1,5 +1,6 @@
-split :: [a] -> Integer -> ([a], [a])
-split l i = (take' l i, drop' l i)
+slice :: [a] -> Integer -> Integer -> [a]
+slice l s e = take' (drop' l s)
+                    (e - s + 1)
   where take' l 0 = []
         take' [] n = error "List not large enough"
         take' (x:xs) n = x:(take' xs (n - 1))
